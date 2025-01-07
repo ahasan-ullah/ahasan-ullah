@@ -2,7 +2,9 @@
 
 ###
 
-<img align="right" height="200" src="https://i.ibb.co.com/c6Ksfkn/batman-cartoon-ni993jf8cqvsofrv.webp"  />
+<div align="center">
+  <img height="200" src="https://i.ibb.co.com/c6Ksfkn/batman-cartoon-ni993jf8cqvsofrv.webp"  />
+</div>
 
 ###
 
@@ -60,7 +62,9 @@
   <a href="https://x.com/ahasan_hridoy_" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="twitter logo"  />
   </a>
-  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  <a href="https://www.linkedin.com/in/md-ahasan-ullah/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  </a>
 </div>
 
 ###
