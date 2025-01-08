@@ -3,7 +3,7 @@
 ###
 
 <div align="center">
-  <img height="200" src="[https://i.ibb.co.com/c6Ksfkn/batman-cartoon-ni993jf8cqvsofrv.webp](https://i.ibb.co.com/GRChtPs/rb-3581.png)"  />
+  <img height="200" src="https://i.ibb.co.com/GRChtPs/rb-3581.png"  />
 </div>
 
 ###
