@@ -54,5 +54,5 @@ In my free time, I enjoy **reading books** and exploring new technologies.
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/github-contribution-grid-snake.svg" alt="Snake animation" />
 </p>
