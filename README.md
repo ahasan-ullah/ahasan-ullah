@@ -12,7 +12,7 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/dynamic/json?color=8B5CF6&label=Profile%20Views&query=$.count&url=https://api.countapi.xyz/hit/ahasan-ullah/readme&style=for-the-badge"/>
+<img src="https://komarev.com/ghpvc/?username=ahasan-ullah&color=8B5CF6&style=for-the-badge&label=PROFILE+VIEWS"/>
 
 </div>
 
