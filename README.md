@@ -1,58 +1,96 @@
-<h1 align="center">Hi 👋, I'm Ahasan Ullah</h1>
+<div align="center">
 
-<p align="center">
-  <img src="https://i.ibb.co.com/GRChtPs/rb-3581.png" alt="Ahasan Ullah" width="200"/>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6366F1,100:8B5CF6&height=220&section=header&text=Ahasan%20Ullah&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Robotics%20Enthusiast%20%7C%20Bot%20Developer%20%7C%20Tech%20Explorer&descAlignY=55&descSize=18" width="100%"/>
 
-<p align="center">
-  🎓 Undergraduate Student | 🤖 Robotics Enthusiast | 📚 Tech & Book Lover
-</p>
+<img src="https://i.ibb.co.com/GRChtPs/rb-3581.png" width="150" style="border-radius:50%;"/>
 
----
+<br/>
 
-## 🚀 About Me  
-I'm an undergraduate student at **American International University-Bangladesh** with a passion for **robotics, drones, and bot development**.  
-In my free time, I enjoy **reading books** and exploring new technologies.  
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=800&color=8B5CF6&center=true&vCenter=true&width=600&lines=Undergrad+Student+at+AIUB;Robotics+%26+Drone+Enthusiast;Bot+Developer;Book+Lover+%F0%9F%93%9A" alt="Typing SVG" />
+</a>
 
----
+</div>
 
-## 📊 GitHub Stats  
+<br/>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ahasan-ullah&show_icons=true&count_private=true&theme=radical&hide_border=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahasan-ullah&layout=compact&langs_count=6&theme=radical&hide_border=true" height="165" />
-</p>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
----
+## 🚀 About Me
 
-## 🛠️ Tech Stack  
+```yaml
+name: Ahasan Ullah
+university: American International University-Bangladesh
+interests:
+  - Robotics 🤖
+  - Drones 🚁
+  - Bot Development ⚙️
+hobbies:
+  - Reading books 📚
+  - Exploring new tech 🔍
+currently_learning: "Whatever breaks next 😄"
+```
 
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="HTML5" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="CSS3" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="React" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="Node.js" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="Firebase" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="Java" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="C#" />
-</p>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
----
+## 📊 GitHub Stats
 
-## 🌎 Connect With Me  
+<div align="center">
 
-<p align="left">
-  <a href="https://x.com/ahasan_hridoy_" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="Twitter" />
-  </a>
-  <a href="https://www.linkedin.com/in/md-ahasan-ullah/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="LinkedIn" />
-  </a>
-</p>
+<img src="https://github-readme-stats.vercel.app/api?username=ahasan-ullah&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=6366F1&text_color=C9D1D9" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahasan-ullah&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=C9D1D9" height="165" />
 
----
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=ahasan-ullah&theme=tokyonight&hide_border=true&background=0D1117&stroke=8B5CF6&ring=6366F1&fire=8B5CF6&currStreakLabel=8B5CF6" height="165"/>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/github-contribution-grid-snake.svg" alt="Snake animation" />
-</p>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ahasan-ullah&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=8B5CF6&line=6366F1&point=C9D1D9" width="95%"/>
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=ahasan-ullah&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15&column=7" />
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,firebase,java,cs,py,git&theme=dark" />
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
+
+## 🌎 Connect With Me
+
+<div align="center">
+
+<a href="https://x.com/ahasan_hridoy_" target="_blank">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+</a>
+<a href="https://www.linkedin.com/in/md-ahasan-ullah/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
+
+<div align="center">
+
+### 🐍 Contribution Snake
+
+<img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/github-contribution-grid-snake.svg" alt="Snake animation" width="100%"/>
+
+<br/><br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=ahasan-ullah&color=8B5CF6&style=for-the-badge&label=PROFILE+VIEWS)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,100:6366F1&height=100&section=footer" width="100%"/>
+
+</div>
