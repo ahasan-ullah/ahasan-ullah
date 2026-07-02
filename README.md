@@ -22,7 +22,7 @@
 <tr>
 <td valign="top" width="55%">
 
-### <img src="https://img.icons8.com/fluency/30/000000/rocket.png"/> About Me
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f680.png"/> About Me
 
 - 🎓 &nbsp;Undergraduate at **American International University-Bangladesh**
 - 💻 &nbsp;Building applications in **.NET / C#**
@@ -34,7 +34,7 @@
 </td>
 <td valign="top" width="45%">
 
-### <img src="https://img.icons8.com/fluency/30/000000/source-code.png"/> Quick Facts
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4dd.png"/> Quick Facts
 
 ```yaml
 Location:   Bangladesh
@@ -49,7 +49,7 @@ Fun fact:   Debugging is 90% of the job
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
-### <img src="https://img.icons8.com/fluency/30/000000/combo-chart.png"/> GitHub Stats
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4ca.png"/> GitHub Stats
 
 <div align="center">
 
@@ -64,15 +64,15 @@ Fun fact:   Debugging is 90% of the job
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
-### <img src="https://img.icons8.com/fluency/30/000000/trophy.png"/> GitHub Trophies
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3c6.png"/> GitHub Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=ahasan-ullah&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15&column=7" />
+<img src="https://github-profile-trophy.vercel.app/?username=ahasan-ullah&theme=tokyonight&column=7&margin-w=15" />
 </div>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
-### <img src="https://img.icons8.com/fluency/30/000000/module.png"/> Tech Stack
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f9f0.png"/> Tech Stack
 
 <div align="center">
 
@@ -82,7 +82,7 @@ Fun fact:   Debugging is 90% of the job
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="4">
 
-### <img src="https://img.icons8.com/fluency/30/000000/handshake.png"/> Connect With Me
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f91d.png"/> Connect With Me
 
 <div align="center">
 
@@ -99,7 +99,7 @@ Fun fact:   Debugging is 90% of the job
 
 <div align="center">
 
-### <img src="https://img.icons8.com/fluency/30/000000/reptile.png"/> Contribution Snake
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f40d.png"/> Contribution Snake
 
 <img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%"/>
 
