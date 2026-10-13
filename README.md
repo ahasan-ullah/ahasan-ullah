@@ -21,11 +21,10 @@
 
 ### 🦇 Who's behind the mask
 
-CSE undergraduate at **American International University-Bangladesh (AIUB)**, Dhaka. By day I build full-stack apps; by night I train models.
+**Associate Software Engineer at AIUB SDD** (American International University-Bangladesh), based in Dhaka. By day I build full-stack apps; by night I train models.
 
 - 🛡️ &nbsp;APIs with **C# · ASP.NET Core**
 - ⚡ &nbsp;Front-ends with **Angular** and **React**
-- 🩻 &nbsp;Thesis: **BanglaCXR**, chest X-ray reports in Bangla
 - 📱 &nbsp;Cross-platform apps with **Flutter**
 - 🤖 &nbsp;Into **robotics & drones**
 - 📚 &nbsp;Reader. *Learning through mistakes.*
@@ -59,16 +58,6 @@ CSE undergraduate at **American International University-Bangladesh (AIUB)**, Dh
 <tr>
 <td width="50%" valign="top">
 
-#### 🩻 [BanglaCXR](https://github.com/ahasan-ullah/Thesis)
-Two-stage vision-language pipeline that turns a chest X-ray into a structured radiology report, then renders it in **Bangla**. RAD-DINO encoder → Phi-3.5 Mini (4-bit QLoRA) → NLLB-200.
-
-![Python](https://img.shields.io/badge/Python-0d0e11?style=flat-square&logo=python&logoColor=f5c518)
-![PyTorch](https://img.shields.io/badge/PyTorch-0d0e11?style=flat-square&logo=pytorch&logoColor=f5c518)
-![Jupyter](https://img.shields.io/badge/Jupyter-0d0e11?style=flat-square&logo=jupyter&logoColor=f5c518)
-
-</td>
-<td width="50%" valign="top">
-
 #### 🏢 HRMS — [API](https://github.com/ahasan-ullah/HRMS-API) · [Client](https://github.com/ahasan-ullah/HRMS-Client)
 Human resource management system: an ASP.NET Core Web API backend with an Angular 17 front-end.
 
@@ -78,8 +67,6 @@ Human resource management system: an ASP.NET Core Web API backend with an Angula
 ![TypeScript](https://img.shields.io/badge/TypeScript-0d0e11?style=flat-square&logo=typescript&logoColor=f5c518)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 #### 🛒 [Online Marketplace API](https://github.com/ahasan-ullah/Online-Marketplace-API)
@@ -89,6 +76,8 @@ REST API for an online marketplace, built with C# and ASP.NET Core.
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-0d0e11?style=flat-square&logo=dotnet&logoColor=f5c518)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🗂️ Management System — [Client](https://github.com/ahasan-ullah/Management-System-Client) · [Server](https://github.com/ahasan-ullah/Management-System-Server)
@@ -100,8 +89,6 @@ Full-stack app with a React + Vite + Tailwind client and an Express + MongoDB se
 ![Firebase](https://img.shields.io/badge/Firebase-0d0e11?style=flat-square&logo=firebase&logoColor=f5c518)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 #### 🎟️ [EventEase](https://github.com/ahasan-ullah/Event-Ease)
@@ -112,6 +99,8 @@ Event management web app: organizers host events, users browse, register and man
 ![JavaScript](https://img.shields.io/badge/JavaScript-0d0e11?style=flat-square&logo=javascript&logoColor=f5c518)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🙂 [FaceApi.js Integration](https://github.com/ahasan-ullah/FaceApi.js-Integration)
@@ -119,6 +108,15 @@ In-browser face detection with face-api.js.
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-0d0e11?style=flat-square&logo=javascript&logoColor=f5c518)
 ![HTML5](https://img.shields.io/badge/HTML5-0d0e11?style=flat-square&logo=html5&logoColor=f5c518)
+
+</td>
+<td width="50%" valign="top">
+
+#### 🛍️ [Grocery Management System](https://github.com/ahasan-ullah/Gorcery-Management-System)
+Grocery store management app in C#, designed around object-oriented principles.
+
+![C#](https://img.shields.io/badge/C%23-0d0e11?style=flat-square&logo=dotnet&logoColor=f5c518)
+![OOP](https://img.shields.io/badge/OOP-0d0e11?style=flat-square)
 
 </td>
 </tr>

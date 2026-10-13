@@ -55,10 +55,10 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
 {
   const W = 1200, H = 360;
   const lines = [
+    "Associate Software Engineer @ AIUB SDD",
     "Building REST APIs with ASP.NET Core",
     "Shipping Angular & React front-ends",
     "Crafting cross-platform apps in Flutter",
-    "CSE undergrad @ AIUB, Dhaka",
   ];
   // Each line gets 4s: type for 1.9s, hold until 3.4s, erase by 3.9s.
   const cy = 232, charW = 12.04, slice = 4, dur = slice * lines.length;
@@ -156,12 +156,12 @@ ${batAt(570, 3, 60, GOLD, PULSE)}
   const W = 560, H = 380;
   const rows = [
     ["cmd", "whoami"],
-    ["out", "Ahasan Ullah — CSE undergrad @ AIUB, Dhaka"],
+    ["out", "Ahasan Ullah — Dhaka, Bangladesh"],
     ["cmd", "cat utility-belt.txt"],
     ["out", "C# · ASP.NET Core · Angular · React · Node"],
     ["out", "Python · PyTorch · MongoDB · MySQL · Flutter"],
     ["cmd", "./current-mission --status"],
-    ["out", "BanglaCXR: chest X-ray → Bangla reports"],
+    ["out", "Associate Software Engineer @ AIUB SDD"],
     ["cmd", "echo $MOTTO"],
     ["out", "Learning through mistakes."],
   ];

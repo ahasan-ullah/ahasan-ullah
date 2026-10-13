@@ -18,12 +18,12 @@
 </g>
 <rect x="0.5" y="0.5" width="559" height="379" rx="14" fill="none" stroke="#262a31"/>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.020;0.030;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="92" class="t" fill="#f5c518">❯</text><text x="48" y="92" class="t" fill="#f2f2f2">whoami</text></g>
-<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.075;0.085;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="120" class="t" fill="#9aa1ab">Ahasan Ullah — CSE undergrad @ AIUB, Dhaka</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.075;0.085;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="120" class="t" fill="#9aa1ab">Ahasan Ullah — Dhaka, Bangladesh</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.130;0.140;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="148" class="t" fill="#f5c518">❯</text><text x="48" y="148" class="t" fill="#f2f2f2">cat utility-belt.txt</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.185;0.195;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="176" class="t" fill="#9aa1ab">C# · ASP.NET Core · Angular · React · Node</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.240;0.250;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="204" class="t" fill="#9aa1ab">Python · PyTorch · MongoDB · MySQL · Flutter</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.295;0.305;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="232" class="t" fill="#f5c518">❯</text><text x="48" y="232" class="t" fill="#f2f2f2">./current-mission --status</text></g>
-<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.350;0.360;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="260" class="t" fill="#9aa1ab">BanglaCXR: chest X-ray → Bangla reports</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.350;0.360;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="260" class="t" fill="#9aa1ab">Associate Software Engineer @ AIUB SDD</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.405;0.415;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="288" class="t" fill="#f5c518">❯</text><text x="48" y="288" class="t" fill="#f2f2f2">echo $MOTTO</text></g>
 <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.460;0.470;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="316" class="t" fill="#9aa1ab">Learning through mistakes.</text></g>
 <text x="28" y="344" class="t" fill="#f5c518">❯</text>
