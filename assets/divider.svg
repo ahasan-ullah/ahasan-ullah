@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="6" viewBox="0 0 1200 6" preserveAspectRatio="none" aria-hidden="true">
-<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4f46e5" stop-opacity="0"/><stop offset=".2" stop-color="#4f46e5"/><stop offset=".5" stop-color="#7c3aed"/><stop offset=".8" stop-color="#db2777"/><stop offset="1" stop-color="#db2777" stop-opacity="0"/></linearGradient></defs>
-<rect y="2" width="1200" height="2" rx="1" fill="url(#g)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="28" viewBox="0 0 1200 28" aria-hidden="true">
+<defs>
+  <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset="1" stop-color="#f5c518" stop-opacity="0.9"/></linearGradient>
+  <linearGradient id="r" x1="1" x2="0"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset="1" stop-color="#f5c518" stop-opacity="0.9"/></linearGradient>
+</defs>
+<rect x="80" y="13" width="470" height="2" rx="1" fill="url(#l)"/>
+<rect x="650" y="13" width="470" height="2" rx="1" fill="url(#r)"/>
+<path d="M100,28L104,28L108,16L110,30C122,34 128,24 126,14C150,20 178,26 196,46C178,44 168,52 166,64C156,56 144,58 140,68C130,62 112,66 100,84C88,66 70,62 60,68C56,58 44,56 34,64C32,52 22,44 4,46C22,26 50,20 74,14C72,24 78,34 90,30L92,16L96,28Z" transform="translate(570 3) scale(0.3)" fill="#f5c518"><animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/></path>
 </svg>

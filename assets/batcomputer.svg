@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" role="img" aria-label="Batcomputer terminal: whoami, tech stack, current mission and motto">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13151a"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity="0.025"/></pattern>
+  <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset="1" stop-color="#f5c518" stop-opacity="0.06"/></linearGradient>
+  <clipPath id="c"><rect width="560" height="380" rx="14"/></clipPath>
+</defs>
+<style>.t { font: 500 14.5px 'Cascadia Code', 'Fira Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace; } .h { font: 700 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; letter-spacing: 2.5px; fill: #8b9099; }</style>
+<g clip-path="url(#c)">
+  <rect width="560" height="380" fill="url(#bg)"/>
+  <rect width="560" height="40" fill="#0c0d10"/>
+  <line x1="0" y1="40.5" x2="560" y2="40.5" stroke="#262a31"/>
+  <circle cx="24" cy="20" r="5.5" fill="#f5c518"/><circle cx="42" cy="20" r="5.5" fill="#3a3f48"/><circle cx="60" cy="20" r="5.5" fill="#3a3f48"/>
+  <text x="280" y="24" text-anchor="middle" class="h">BATCOMPUTER — ~/ahasan</text>
+  <path d="M100,28L104,28L108,16L110,30C122,34 128,24 126,14C150,20 178,26 196,46C178,44 168,52 166,64C156,56 144,58 140,68C130,62 112,66 100,84C88,66 70,62 60,68C56,58 44,56 34,64C32,52 22,44 4,46C22,26 50,20 74,14C72,24 78,34 90,30L92,16L96,28Z" transform="translate(370 260) scale(0.85)" fill="#f5c518" opacity="0.05"></path>
+  <rect width="560" height="380" fill="url(#scan)"/>
+  <rect x="0" y="-80" width="560" height="80" fill="url(#sweep)"><animate attributeName="y" values="-80;380" dur="5s" repeatCount="indefinite"/></rect>
+</g>
+<rect x="0.5" y="0.5" width="559" height="379" rx="14" fill="none" stroke="#262a31"/>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.020;0.030;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="92" class="t" fill="#f5c518">❯</text><text x="48" y="92" class="t" fill="#f2f2f2">whoami</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.075;0.085;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="120" class="t" fill="#9aa1ab">Ahasan Ullah — CSE undergrad @ AIUB, Dhaka</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.130;0.140;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="148" class="t" fill="#f5c518">❯</text><text x="48" y="148" class="t" fill="#f2f2f2">cat utility-belt.txt</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.185;0.195;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="176" class="t" fill="#9aa1ab">C# · ASP.NET Core · Angular · React · Node</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.240;0.250;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="204" class="t" fill="#9aa1ab">Python · PyTorch · MongoDB · MySQL · Flutter</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.295;0.305;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="232" class="t" fill="#f5c518">❯</text><text x="48" y="232" class="t" fill="#f2f2f2">./current-mission --status</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.350;0.360;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="260" class="t" fill="#9aa1ab">BanglaCXR: chest X-ray → Bangla reports</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.405;0.415;0.94;1" dur="18s" repeatCount="indefinite"/><text x="28" y="288" class="t" fill="#f5c518">❯</text><text x="48" y="288" class="t" fill="#f2f2f2">echo $MOTTO</text></g>
+<g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.460;0.470;0.94;1" dur="18s" repeatCount="indefinite"/><text x="48" y="316" class="t" fill="#9aa1ab">Learning through mistakes.</text></g>
+<text x="28" y="344" class="t" fill="#f5c518">❯</text>
+<rect x="48" y="331" width="9" height="17" fill="#f5c518"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></rect>
+</svg>
