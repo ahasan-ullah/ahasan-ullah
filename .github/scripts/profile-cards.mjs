@@ -131,6 +131,8 @@ export function summarize(data, now = new Date()) {
   const lastYear = recent.reduce((s, d) => s + d.count, 0);
   const activeDays = recent.filter((d) => d.count > 0).length;
   const bestDay = days.reduce((m, d) => Math.max(m, d.count), 0);
+  // One cell per day of the last year, positioned like GitHub's calendar (week column, weekday row).
+  const calendar = recent.map((d) => ({ ...d, week: Math.floor((Date.parse(d.date) - start) / (7 * DAY)), weekday: new Date(d.date).getUTCDay() }));
 
   const langs = data.languages.filter((l) => !EXCLUDED_LANGUAGES.has(l.name)).sort((a, b) => b.size - a.size);
   const langTotal = langs.reduce((s, l) => s + l.size, 0) || 1;
@@ -139,7 +141,7 @@ export function summarize(data, now = new Date()) {
   if (rest > 0) top.push({ name: "Other", pct: (rest / langTotal) * 100 });
 
   return {
-    ...data, total, longest, current, weeks, lastYear, activeDays, bestDay,
+    ...data, total, longest, current, weeks, calendar, lastYear, activeDays, bestDay,
     topLanguages: top, sinceYear: new Date(data.createdAt).getUTCFullYear(), year: today.getUTCFullYear(),
   };
 }
@@ -311,6 +313,133 @@ ${months}`,
     `Weekly contributions over the last year, ${s.lastYear} in total. Busiest week ${s.weeks[peak].start} with ${s.weeks[peak].count}.`);
 }
 
+// Stable pseudo-random in [0, 1) from a string, so lit windows and stars stay put between runs.
+function hash01(str) {
+  let h = 2166136261;
+  for (const c of str) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); }
+  h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); h ^= h >>> 15;
+  return (h >>> 0) / 4294967296;
+}
+
+// The contribution calendar as a city at night: one building per day, height and roof
+// glow by contributions, back rows (Sunday) to front rows (Saturday) in oblique projection.
+export function skylineCard(s) {
+  const W = 1200, H = 420;
+  const PX = 19, BW = 14, RDX = 8, RDY = 7, FDX = 6, FDY = 5; // column pitch, width, row step, roof depth
+  const n = s.weeks.length;
+  const cityW = n * PX + 6 * RDX + BW;
+  const x0 = Math.round((W - cityW) / 2), y0 = H - 74;
+  const max = Math.max(1, ...s.calendar.map((d) => d.count));
+  const level = (c) => (c === 0 ? 0 : Math.min(4, Math.ceil((c / max) * 4)));
+  const heightOf = (c) => (c === 0 ? 2 : 7 + Math.sqrt(c / max) * 122);
+  const ROOF = ["#1f232b", "#5a4500", "#8a6a00", "#c99a00", T.gold];
+  const pos = (d) => {
+    const depth = 6 - d.weekday;
+    return { X: x0 + d.week * PX + depth * RDX, Y: y0 - depth * RDY };
+  };
+
+  // Sky: stars, a far skyline, and the bat-signal with its beam.
+  let stars = "";
+  for (let i = 0; i < 90; i++) {
+    const x = hash01(`sx${i}`) * W, y = 70 + hash01(`sy${i}`) * 170, r = hash01(`sr${i}`) < 0.15 ? 1.3 : 0.75;
+    const tw = hash01(`st${i}`) < 0.25
+      ? `<animate attributeName="opacity" values="0.7;0.15;0.7" dur="${(2.5 + hash01(`sd${i}`) * 4).toFixed(1)}s" begin="-${(hash01(`sb${i}`) * 4).toFixed(1)}s" repeatCount="indefinite"/>`
+      : "";
+    stars += `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${r}" fill="#fff" opacity="${(0.2 + hash01(`so${i}`) * 0.45).toFixed(2)}">${tw}</circle>`;
+  }
+  let far = `M0,${y0 - 40}`;
+  for (let x = 0; x < W; ) {
+    const bw = 18 + Math.floor(hash01(`fw${x}`) * 34), h = 14 + hash01(`fh${x}`) * 62;
+    far += `V${(y0 - 40 - h).toFixed(0)}H${x + bw}`;
+    x += bw;
+  }
+  far += `V${H}H0Z`;
+  const sx = 1086, sy = 104, lx = 1010, ly = H;
+  const signal = `<radialGradient id="sigHalo" cx="${sx / W}" cy="${sy / H}" r="0.3"><stop offset="0" stop-color="${T.gold}" stop-opacity="0.2"/><stop offset="1" stop-color="${T.gold}" stop-opacity="0"/></radialGradient>
+<radialGradient id="sigDisc" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff6c8"/><stop offset="0.7" stop-color="${T.gold}"/><stop offset="1" stop-color="${T.gold}" stop-opacity="0"/></radialGradient>
+<linearGradient id="sigBeam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${T.gold}" stop-opacity="0.22"/><stop offset="1" stop-color="${T.gold}" stop-opacity="0.03"/></linearGradient>`;
+
+  // Buildings: back rows first, then left to right, so nearer buildings cover farther ones.
+  const cells = [...s.calendar].sort((a, b) => a.weekday - b.weekday || a.week - b.week);
+  let city = "";
+  for (const d of cells) {
+    const { X, Y } = pos(d), h = heightOf(d.count), top = Y - h, lv = level(d.count);
+    city += `<rect x="${X}" y="${top.toFixed(1)}" width="${BW}" height="${h.toFixed(1)}" fill="#171a21"/>`;
+    city += `<path d="M${X + BW},${top.toFixed(1)}l${FDX},-${FDY}V${Y - FDY}l-${FDX},${FDY}Z" fill="#0e1014"/>`;
+    city += `<path d="M${X},${top.toFixed(1)}h${BW}l${FDX},-${FDY}h-${BW}Z" fill="${ROOF[lv]}"/>`;
+    if (h >= 16) {
+      let lit = "", twinkle = "";
+      for (let wy = top + 5, r = 0; wy < Y - 6; wy += 6, r++)
+        for (let c = 0; c < 2; c++) {
+          const k = hash01(`${d.date}:${r}:${c}`);
+          if (k < 0.16 + lv * 0.16) {
+            const wx = X + 3 + c * 5;
+            if (k < 0.03) twinkle += `<rect x="${wx}" y="${wy.toFixed(1)}" width="3" height="3" fill="#ffd75e"><animate attributeName="opacity" values="1;1;0.15;1" keyTimes="0;0.7;0.8;1" dur="${(4 + k * 200).toFixed(1)}s" repeatCount="indefinite"/></rect>`;
+            else lit += `M${wx},${wy.toFixed(1)}h3v3h-3Z`;
+          }
+        }
+      if (lit) city += `<path d="${lit}" fill="#ffd75e" opacity="${(0.55 + lv * 0.1).toFixed(2)}"/>`;
+      city += twinkle;
+    }
+  }
+
+  // Ground plane under the whole grid.
+  const gx = x0 - 10, gy = y0 + 6, gw = n * PX + 6;
+  const ground = `<path d="M${gx},${gy}h${gw + 12}l${6 * RDX + FDX + 6},-${6 * RDY + FDY + 6}h-${gw + 12}Z" fill="#0b0d10" stroke="#1d2026"/>`;
+
+  // Best day: a pulsing glow on its roof and a callout.
+  const bp = pos(best(s)), bh = heightOf(best(s).count);
+  const bx = bp.X + BW / 2 + FDX / 2, by = bp.Y - bh - FDY;
+  const label = `BEST DAY · ${best(s).count} · ${MONTHS[new Date(best(s).date).getUTCMonth()]} ${new Date(best(s).date).getUTCDate()}`;
+  const lw = label.length * 6.6 + 20, lxp = Math.min(Math.max(bx - lw / 2, 16), W - lw - 16), lyp = by - 46;
+  const callout = best(s).count > 0
+    ? `<ellipse cx="${bx}" cy="${by}" rx="16" ry="7" fill="${T.gold}" opacity="0.35" filter="url(#blur)"><animate attributeName="opacity" values="0.35;0.75;0.35" dur="2.4s" repeatCount="indefinite"/></ellipse>
+<line x1="${bx}" y1="${by - 4}" x2="${bx}" y2="${lyp + 22}" stroke="${T.gold}" stroke-width="1" stroke-dasharray="2 3" opacity="0.8"/>
+<rect x="${lxp}" y="${lyp}" width="${lw}" height="22" rx="11" fill="#0b0c0f" stroke="${T.gold}" stroke-opacity="0.7"/>
+<text x="${lxp + lw / 2}" y="${lyp + 15}" text-anchor="middle" style="font-size:10.5px;font-weight:700;letter-spacing:1.2px;fill:${T.gold}">${label}</text>`
+    : "";
+
+  let months = "", lastMonth = -1;
+  s.weeks.forEach((w, i) => {
+    const mid = new Date(Date.parse(w.start) + 3 * DAY);
+    if (mid.getUTCMonth() !== lastMonth) {
+      if (lastMonth !== -1 || mid.getUTCDate() <= 10) months += `<text x="${x0 + i * PX}" y="${y0 + 26}" class="axis">${MONTHS[mid.getUTCMonth()]}</text>`;
+      lastMonth = mid.getUTCMonth();
+    }
+  });
+
+  const legend = ROOF.map((c, i) => `<path d="M${W - 146 + i * 17},${H - 15}h12l5,-5h-12Z" fill="${c}"/>`).join("");
+  const first = s.weeks[0].start, fmtDate = (iso) => `${MONTHS[new Date(iso).getUTCMonth()]} ${new Date(iso).getUTCFullYear()}`;
+
+  return frame(W, H, "Gotham skyline of commits",
+    `<defs>${signal}
+  <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${T.bg2}" stop-opacity="0"/><stop offset="1" stop-color="${T.bg2}" stop-opacity="0.9"/></linearGradient>
+  <linearGradient id="mist" x1="0" x2="1"><stop offset="0" stop-color="#9fb3c8" stop-opacity="0"/><stop offset="0.5" stop-color="#9fb3c8" stop-opacity="0.07"/><stop offset="1" stop-color="#9fb3c8" stop-opacity="0"/></linearGradient>
+  <filter id="blur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<text x="${W - 24}" y="36" class="axis" text-anchor="end">${fmtDate(first)} – ${fmtDate(isoDay(new Date()))} · one building per day</text>
+<text x="24" y="60" class="sub">${fmt(s.lastYear)} contributions in the last year · taller buildings and brighter rooftops mean busier days</text>
+${stars}
+<rect width="${W}" height="${H}" fill="url(#sigHalo)"/>
+<g>
+  <animateTransform attributeName="transform" type="rotate" values="0 ${lx} ${ly};-4 ${lx} ${ly};2 ${lx} ${ly};0 ${lx} ${ly}" dur="12s" repeatCount="indefinite"/>
+  <path d="M${lx - 8},${ly} L${sx - 46},${sy + 6} A46,36 0 0 1 ${sx + 46},${sy - 6} L${lx + 8},${ly} Z" fill="url(#sigBeam)"/>
+  <ellipse cx="${sx}" cy="${sy}" rx="48" ry="38" fill="url(#sigDisc)"><animate attributeName="opacity" values="1;0.82;1" dur="5s" repeatCount="indefinite"/></ellipse>
+  ${bat(sx - 37, sy - 20, 74, "#08090c")}
+</g>
+<path d="${far}" fill="#0c0e12" opacity="0.75"/>
+${ground}
+${city}
+<rect x="0" y="${y0 - 70}" width="${W}" height="${H - y0 + 70}" fill="url(#fog)"/>
+<rect x="-400" y="${y0 - 40}" width="900" height="60" fill="url(#mist)"><animate attributeName="x" values="-400;${W};-400" dur="40s" repeatCount="indefinite"/></rect>
+${callout}
+${months}
+<text x="24" y="${H - 14}" class="axis">${fmt(s.activeDays)} active days · longest streak ${fmt(s.longest)} days · current streak ${fmt(s.current)} ${s.current === 1 ? "day" : "days"}</text>
+<text x="${W - 152}" y="${H - 14}" class="axis" text-anchor="end">quiet</text>${legend}<text x="${W - 24}" y="${H - 14}" class="axis" text-anchor="end">busy</text>`,
+    `Contribution calendar for the last year drawn as a city, one building per day. ${s.lastYear} contributions; busiest day ${best(s).date} with ${best(s).count}.`);
+}
+const best = (s) => s.calendar.reduce((a, d) => (d.count > a.count ? d : a), s.calendar[0]);
+
 // Platane/snk leaves the SVG background transparent; give it the same dark card as the rest.
 // snk runs as a Docker action, so its output is root-owned: read it and write a new file.
 export async function frameSnake(src, dest) {
@@ -335,6 +464,7 @@ export async function writeCards(summary, outDir) {
   await writeFile(join(outDir, "stats.svg"), statsCard(summary));
   await writeFile(join(outDir, "languages.svg"), languagesCard(summary));
   await writeFile(join(outDir, "activity.svg"), activityCard(summary));
+  await writeFile(join(outDir, "skyline.svg"), skylineCard(summary));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

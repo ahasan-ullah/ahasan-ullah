@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="assets/header.svg" alt="Ahasan Ullah — .NET Developer · Angular & React · Machine Learning" width="100%"/>
+<img src="assets/header.svg" alt="Ahasan Ullah — .NET Developer · Angular & React · Flutter · Machine Learning" width="100%"/>
 
 <br/>
 
@@ -136,10 +136,8 @@ In-browser face detection with face-api.js.
 
 </div>
 
-### 🌃 Gotham skyline of commits
-
 <div align="center">
-<img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/3d/profile-customize.svg" width="100%" alt="3D contribution calendar"/>
+<img src="https://raw.githubusercontent.com/ahasan-ullah/ahasan-ullah/output/skyline.svg" width="99%" alt="Gotham skyline of commits: the last year of contributions drawn as a city, one building per day"/>
 </div>
 
 ### 🦇 Night patrol

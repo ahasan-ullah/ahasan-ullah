@@ -57,10 +57,12 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
   const lines = [
     "Building REST APIs with ASP.NET Core",
     "Shipping Angular & React front-ends",
-    "Thesis: chest X-ray → Bangla reports",
+    "Crafting cross-platform apps in Flutter",
     "CSE undergrad @ AIUB, Dhaka",
   ];
-  const cy = 232, charW = 12.04, dur = 16, slice = dur / lines.length, kt = "0;0.12;0.21;0.245;1";
+  // Each line gets 4s: type for 1.9s, hold until 3.4s, erase by 3.9s.
+  const cy = 232, charW = 12.04, slice = 4, dur = slice * lines.length;
+  const kt = [0, 1.9, 3.4, 3.9].map((t) => +(t / dur).toFixed(4)).concat(1).join(";");
   const clips = [], typed = [];
   lines.forEach((l, i) => {
     const text = `> ${l}`;
@@ -68,7 +70,7 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
     // Base values show line 0 in full, so a renderer without SMIL still gets a complete frame.
     clips.push(`<clipPath id="c${i}"><rect x="${x0}" y="${cy - 22}" height="30" width="${i === 0 ? w : 0}"><animate attributeName="width" values="0;${w};${w};0;0" keyTimes="${kt}" dur="${dur}s" begin="${begin}" repeatCount="indefinite"/></rect></clipPath>`);
     typed.push(`<text x="${x0}" y="${cy}" clip-path="url(#c${i})" class="mono">${esc(text)}</text>
-<rect x="${x0}" y="${cy - 18}" width="10" height="22" fill="${GOLD}" opacity="0"><animate attributeName="x" values="${x0};${x0 + w + 2};${x0 + w + 2};${x0};${x0}" keyTimes="${kt}" dur="${dur}s" begin="${begin}" repeatCount="indefinite"/><animate attributeName="opacity" values="0.85;0" keyTimes="0;0.25" calcMode="discrete" dur="${dur}s" begin="${begin}" repeatCount="indefinite"/></rect>`);
+<rect x="${x0}" y="${cy - 18}" width="10" height="22" fill="${GOLD}" opacity="0"><animate attributeName="x" values="${x0};${x0 + w + 2};${x0 + w + 2};${x0};${x0}" keyTimes="${kt}" dur="${dur}s" begin="${begin}" repeatCount="indefinite"/><animate attributeName="opacity" values="0.85;0" keyTimes="0;${+(slice / dur).toFixed(4)}" calcMode="discrete" dur="${dur}s" begin="${begin}" repeatCount="indefinite"/></rect>`);
   });
 
   let stars = "";
@@ -87,7 +89,7 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
   ].map((b, i) => `<g opacity="0.9" transform="translate(${[300, 640, 180][i]} ${b.y})"><animateTransform attributeName="transform" type="translate" values="${W + 40} ${b.y};${W / 2} ${b.y + 18};-80 ${b.y - 6}" dur="${b.dur}s" begin="${b.begin}s" repeatCount="indefinite"/>
   <g transform="translate(${-b.w / 2} 0)"><g><animateTransform attributeName="transform" type="scale" values="1 1;1 0.45;1 1" dur="0.5s" repeatCount="indefinite"/>${batAt(0, 0, b.w, "#2b303a")}</g></g></g>`);
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Ahasan Ullah: .NET developer, Angular and React, machine learning">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Ahasan Ullah: .NET developer, Angular and React, Flutter, machine learning">
 <defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#030406"/><stop offset="0.6" stop-color="#0b0e15"/><stop offset="1" stop-color="#171b24"/></linearGradient>
   <radialGradient id="halo" cx="${sx / W}" cy="${sy / H}" r="0.42"><stop offset="0" stop-color="${GOLD}" stop-opacity="0.22"/><stop offset="1" stop-color="${GOLD}" stop-opacity="0"/></radialGradient>
@@ -106,7 +108,7 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
 </defs>
 <style>
   .name { font: 800 58px ${SANS}; letter-spacing: 8px; }
-  .role { font: 600 15px ${SANS}; fill: #c9ccd1; letter-spacing: 4.5px; }
+  .role { font: 600 15px ${SANS}; fill: #c9ccd1; letter-spacing: 3.2px; }
   .mono { font: 500 20px ${MONO}; fill: ${GOLD}; }
 </style>
 <g clip-path="url(#frame)">
@@ -130,7 +132,7 @@ const PULSE = { children: `<animate attributeName="opacity" values="1;0.6;1" dur
 <text x="600" y="118" text-anchor="middle" class="name" fill="url(#nameFill)">AHASAN ULLAH</text>
 <rect x="440" y="140" width="320" height="2" fill="url(#rule)"/>
 ${batAt(586, 133, 28, GOLD)}
-<text x="600" y="176" text-anchor="middle" class="role">.NET DEVELOPER  ·  ANGULAR &amp; REACT  ·  MACHINE LEARNING</text>
+<text x="600" y="176" text-anchor="middle" class="role">.NET DEVELOPER  ·  ANGULAR &amp; REACT  ·  FLUTTER  ·  MACHINE LEARNING</text>
 ${typed.join("\n")}
 </svg>
 `;

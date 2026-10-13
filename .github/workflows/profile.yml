@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Stats, languages and activity cards
+      - name: Stats, languages, activity and skyline cards
         run: node .github/scripts/profile-cards.mjs
         env:
           GITHUB_TOKEN: ${{ env.GH_TOKEN }}
@@ -46,16 +46,6 @@ jobs:
 
       - name: Put the snake on a dark panel
         run: node .github/scripts/profile-cards.mjs --frame-snake snk/snake.svg dist/snake.svg
-
-      - name: 3D contribution graph
-        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
-        env:
-          GITHUB_TOKEN: ${{ env.GH_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: .github/profile-3d-batman.json
-
-      - name: Collect 3D graph
-        run: mkdir -p dist/3d && cp profile-3d-contrib/*.svg dist/3d/
 
       - name: Publish to "output" branch
         uses: crazy-max/ghaction-github-pages@v4
