@@ -3,7 +3,7 @@
 // Zero dependencies: Node 20+ only.
 //
 //   GITHUB_TOKEN=... GITHUB_USER=ahasan-ullah node .github/scripts/profile-cards.mjs
-//   node .github/scripts/profile-cards.mjs --frame-snake dist/snake.svg
+//   node .github/scripts/profile-cards.mjs --frame-snake snk/snake.svg dist/snake.svg
 //
 // Every animation here only adds motion on top of a complete picture: a renderer that
 // doesn't play SVG animation (image proxies, previews) still shows the full card.
@@ -312,10 +312,11 @@ ${months}`,
 }
 
 // Platane/snk leaves the SVG background transparent; give it the same dark card as the rest.
-export async function frameSnake(file) {
-  const svg = await readFile(file, "utf8");
+// snk runs as a Docker action, so its output is root-owned: read it and write a new file.
+export async function frameSnake(src, dest) {
+  const svg = await readFile(src, "utf8");
   const vb = svg.match(/viewBox="([-\d.\s]+)"/)?.[1].trim().split(/\s+/).map(Number);
-  if (!vb) throw new Error(`no viewBox in ${file}`);
+  if (!vb) throw new Error(`no viewBox in ${src}`);
   const [x, y, w, h] = vb;
   const pad = 8;
   const panel = `<rect x="${x - pad}" y="${y - pad}" width="${w + 2 * pad}" height="${h + 2 * pad}" rx="14" fill="${T.bg2}" stroke="${T.border}"/>`;
@@ -324,7 +325,7 @@ export async function frameSnake(file) {
     .replace(/(<svg[^>]*?\s)width="[\d.]+"/, `$1width="${w + 2 * pad}"`)
     .replace(/(<svg[^>]*?\s)height="[\d.]+"/, `$1height="${h + 2 * pad}"`)
     .replace(/(<svg[^>]*>)/, `$1${panel}`);
-  await writeFile(file, out);
+  await writeFile(dest, out);
 }
 
 // ---------------------------------------------------------------- main
@@ -338,7 +339,7 @@ export async function writeCards(summary, outDir) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   if (process.argv[2] === "--frame-snake") {
-    await frameSnake(process.argv[3]);
+    await frameSnake(process.argv[3], process.argv[4]);
   } else {
     const token = process.env.GITHUB_TOKEN;
     const login = process.env.GITHUB_USER;

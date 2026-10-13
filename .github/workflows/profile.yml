@@ -42,10 +42,10 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?color_snake=#f5c518&color_dots=#1a1d23,#4d3c00,#8a6a00,#c99a00,#f5c518
+            snk/snake.svg?color_snake=#f5c518&color_dots=#1a1d23,#4d3c00,#8a6a00,#c99a00,#f5c518
 
       - name: Put the snake on a dark panel
-        run: node .github/scripts/profile-cards.mjs --frame-snake dist/snake.svg
+        run: node .github/scripts/profile-cards.mjs --frame-snake snk/snake.svg dist/snake.svg
 
       - name: 3D contribution graph
         uses: yoshi389111/github-profile-3d-contrib@v0.9.3
