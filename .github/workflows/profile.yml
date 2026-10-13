@@ -1,0 +1,63 @@
+name: Build profile graphics
+
+# Generates every dynamic image in the README and publishes it to the "output" branch,
+# so the README never depends on third-party card services being up.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-graphics
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Optional: add a classic PAT (read:user) as METRICS_TOKEN to include private contributions.
+      GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Stats, languages and activity cards
+        run: node .github/scripts/profile-cards.mjs
+        env:
+          GITHUB_TOKEN: ${{ env.GH_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+          OUT_DIR: dist
+
+      - name: Contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ env.GH_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Collect 3D graph
+        run: mkdir -p dist/3d && cp profile-3d-contrib/*.svg dist/3d/
+
+      - name: Publish to "output" branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
