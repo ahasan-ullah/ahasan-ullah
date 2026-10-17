@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="260" viewBox="0 0 990 260" role="img" aria-labelledby="t d">
+<title id="t">Night patrol log</title><desc id="d">Weekly contributions over the last year, 472 in total. Busiest week 2026-10-11 with 70.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13151a"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+  <radialGradient id="haze" cx="1" cy="0" r="0.9"><stop offset="0" stop-color="#f5c518" stop-opacity="0.09"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset="0.5" stop-color="#f5c518" stop-opacity="0.8"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></linearGradient>
+  <clipPath id="card"><rect width="990" height="260" rx="14"/></clipPath>
+</defs>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #f2f2f2; }
+  .title { font-size: 13px; font-weight: 700; letter-spacing: 2.2px; }
+  .sub { font-size: 12px; fill: #a1a6ad; }
+  .label { font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; fill: #a1a6ad; }
+  .axis { font-size: 11px; fill: #6b7078; }
+  .value { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+</style>
+<g clip-path="url(#card)">
+  <rect width="990" height="260" fill="url(#bg)"/>
+  <rect width="990" height="260" fill="url(#haze)"/>
+  <rect x="-260" y="-40" width="160" height="340" fill="url(#sheen)" transform="skewX(-18)">
+    <animate attributeName="x" values="-260;-260;1250" keyTimes="0;0.7;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="990" height="2" fill="url(#edge)" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.25;0.7" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</g>
+<rect x="0.5" y="0.5" width="989" height="259" rx="14" fill="none" stroke="#262a31"/>
+<path d="M100,28L104,28L108,16L110,30C122,34 128,24 126,14C150,20 178,26 196,46C178,44 168,52 166,64C156,56 144,58 140,68C130,62 112,66 100,84C88,66 70,62 60,68C56,58 44,56 34,64C32,52 22,44 4,46C22,26 50,20 74,14C72,24 78,34 90,30L92,16L96,28Z" transform="translate(24 23) scale(0.15)" fill="#f5c518"><animate attributeName="opacity" values="1;0.55;1" dur="3s" repeatCount="indefinite"/></path>
+<text x="62" y="36" class="title">NIGHT PATROL LOG</text>
+<text x="24" y="58" class="sub">472 contributions in the last year · busiest week: 70</text>
+<rect x="892" y="27" width="10" height="10" rx="2" fill="#ffffff"/>
+<text x="966" y="36" class="axis" text-anchor="end">this week</text>
+<line x1="52" x2="966" y1="226" y2="226" stroke="#1d2026"/>
+<text x="42" y="230" class="axis" text-anchor="end">0</text>
+<line x1="52" x2="966" y1="188" y2="188" stroke="#1d2026"/>
+<text x="42" y="192" class="axis" text-anchor="end">20</text>
+<line x1="52" x2="966" y1="150" y2="150" stroke="#1d2026"/>
+<text x="42" y="154" class="axis" text-anchor="end">40</text>
+<line x1="52" x2="966" y1="112" y2="112" stroke="#1d2026"/>
+<text x="42" y="116" class="axis" text-anchor="end">60</text>
+<line x1="52" x2="966" y1="74" y2="74" stroke="#1d2026"/>
+<text x="42" y="78" class="axis" text-anchor="end">80</text>
+<path d="M53,226V188.2Q53,184.2 57,184.2H64.24528301886792Q68.24528301886792,184.2 68.24528301886792,188.2V226Z" fill="#f5c518"><title>Week of 2025-10-12: 22 contributions</title></path>
+<path d="M190.96226415094338,226V224.3Q190.96226415094338,220.3 194.96226415094338,220.3H202.2075471698113Q206.2075471698113,220.3 206.2075471698113,224.3V226Z" fill="#f5c518"><title>Week of 2025-12-07: 3 contributions</title></path>
+<path d="M242.69811320754715,226V214.8Q242.69811320754715,210.8 246.69811320754715,210.8H253.94339622641508Q257.9433962264151,210.8 257.9433962264151,214.8V226Z" fill="#f5c518"><title>Week of 2025-12-28: 8 contributions</title></path>
+<path d="M259.9433962264151,226V220.5Q259.9433962264151,216.5 263.9433962264151,216.5H271.18867924528297Q275.18867924528297,216.5 275.18867924528297,220.5V226Z" fill="#f5c518"><title>Week of 2026-01-04: 5 contributions</title></path>
+<path d="M294.4339622641509,226V226Q294.4339622641509,222.2 298.23396226415093,222.2H305.87924528301886Q309.6792452830189,222.2 309.6792452830189,226V226Z" fill="#f5c518"><title>Week of 2026-01-18: 2 contributions</title></path>
+<path d="M311.6792452830189,226V222.4Q311.6792452830189,218.4 315.6792452830189,218.4H322.92452830188677Q326.92452830188677,218.4 326.92452830188677,222.4V226Z" fill="#f5c518"><title>Week of 2026-01-25: 4 contributions</title></path>
+<path d="M328.92452830188677,226V193.9Q328.92452830188677,189.9 332.92452830188677,189.9H340.16981132075466Q344.16981132075466,189.9 344.16981132075466,193.9V226Z" fill="#f5c518"><title>Week of 2026-02-01: 19 contributions</title></path>
+<path d="M363.4150943396226,226V193.9Q363.4150943396226,189.9 367.4150943396226,189.9H374.66037735849056Q378.66037735849056,189.9 378.66037735849056,193.9V226Z" fill="#f5c518"><title>Week of 2026-02-15: 19 contributions</title></path>
+<path d="M380.66037735849056,226V190.1Q380.66037735849056,186.1 384.66037735849056,186.1H391.90566037735846Q395.90566037735846,186.1 395.90566037735846,190.1V226Z" fill="#f5c518"><title>Week of 2026-02-22: 21 contributions</title></path>
+<path d="M397.90566037735846,226V201.5Q397.90566037735846,197.5 401.90566037735846,197.5H409.15094339622635Q413.15094339622635,197.5 413.15094339622635,201.5V226Z" fill="#f5c518"><title>Week of 2026-03-01: 15 contributions</title></path>
+<path d="M415.15094339622635,226V224.3Q415.15094339622635,220.3 419.15094339622635,220.3H426.39622641509425Q430.39622641509425,220.3 430.39622641509425,224.3V226Z" fill="#f5c518"><title>Week of 2026-03-08: 3 contributions</title></path>
+<path d="M432.3962264150943,226V226Q432.3962264150943,224.1 434.29622641509434,224.1H445.7415094339623Q447.64150943396226,224.1 447.64150943396226,226V226Z" fill="#f5c518"><title>Week of 2026-03-15: 1 contributions</title></path>
+<path d="M484.13207547169804,226V226Q484.13207547169804,224.1 486.032075471698,224.1H497.47735849056596Q499.37735849056594,224.1 499.37735849056594,226V226Z" fill="#f5c518"><title>Week of 2026-04-05: 1 contributions</title></path>
+<path d="M501.377358490566,226V222.4Q501.377358490566,218.4 505.377358490566,218.4H512.622641509434Q516.622641509434,218.4 516.622641509434,222.4V226Z" fill="#f5c518"><title>Week of 2026-04-12: 4 contributions</title></path>
+<path d="M518.622641509434,226V220.5Q518.622641509434,216.5 522.622641509434,216.5H529.8679245283018Q533.8679245283018,216.5 533.8679245283018,220.5V226Z" fill="#f5c518"><title>Week of 2026-04-19: 5 contributions</title></path>
+<path d="M535.8679245283018,226V186.3Q535.8679245283018,182.3 539.8679245283018,182.3H547.1132075471697Q551.1132075471697,182.3 551.1132075471697,186.3V226Z" fill="#f5c518"><title>Week of 2026-04-26: 23 contributions</title></path>
+<path d="M553.1132075471697,226V186.3Q553.1132075471697,182.3 557.1132075471697,182.3H564.3584905660376Q568.3584905660376,182.3 568.3584905660376,186.3V226Z" fill="#f5c518"><title>Week of 2026-05-03: 23 contributions</title></path>
+<path d="M570.3584905660377,226V173Q570.3584905660377,169 574.3584905660377,169H581.6037735849056Q585.6037735849056,169 585.6037735849056,173V226Z" fill="#f5c518"><title>Week of 2026-05-10: 30 contributions</title></path>
+<path d="M587.6037735849056,226V211Q587.6037735849056,207 591.6037735849056,207H598.8490566037735Q602.8490566037735,207 602.8490566037735,211V226Z" fill="#f5c518"><title>Week of 2026-05-17: 10 contributions</title></path>
+<path d="M622.0943396226414,226V224.3Q622.0943396226414,220.3 626.0943396226414,220.3H633.3396226415093Q637.3396226415093,220.3 637.3396226415093,224.3V226Z" fill="#f5c518"><title>Week of 2026-05-31: 3 contributions</title></path>
+<path d="M656.5849056603773,226V226Q656.5849056603773,222.2 660.3849056603774,222.2H668.0301886792452Q671.8301886792452,222.2 671.8301886792452,226V226Z" fill="#f5c518"><title>Week of 2026-06-14: 2 contributions</title></path>
+<path d="M673.8301886792452,226V167.3Q673.8301886792452,163.3 677.8301886792452,163.3H685.0754716981131Q689.0754716981131,163.3 689.0754716981131,167.3V226Z" fill="#f5c518"><title>Week of 2026-06-21: 33 contributions</title></path>
+<path d="M691.0754716981131,226V180.6Q691.0754716981131,176.6 695.0754716981131,176.6H702.320754716981Q706.320754716981,176.6 706.320754716981,180.6V226Z" fill="#f5c518"><title>Week of 2026-06-28: 26 contributions</title></path>
+<path d="M708.3207547169811,226V199.6Q708.3207547169811,195.6 712.3207547169811,195.6H719.566037735849Q723.566037735849,195.6 723.566037735849,199.6V226Z" fill="#f5c518"><title>Week of 2026-07-05: 16 contributions</title></path>
+<path d="M725.566037735849,226V180.6Q725.566037735849,176.6 729.566037735849,176.6H736.8113207547169Q740.8113207547169,176.6 740.8113207547169,180.6V226Z" fill="#f5c518"><title>Week of 2026-07-12: 26 contributions</title></path>
+<path d="M742.8113207547169,226V216.7Q742.8113207547169,212.7 746.8113207547169,212.7H754.0566037735848Q758.0566037735848,212.7 758.0566037735848,216.7V226Z" fill="#f5c518"><title>Week of 2026-07-19: 7 contributions</title></path>
+<path d="M811.7924528301886,226V226Q811.7924528301886,222.2 815.5924528301887,222.2H823.2377358490564Q827.0377358490565,222.2 827.0377358490565,226V226Z" fill="#f5c518"><title>Week of 2026-08-16: 2 contributions</title></path>
+<path d="M880.7735849056603,226V209.1Q880.7735849056603,205.1 884.7735849056603,205.1H892.0188679245282Q896.0188679245282,205.1 896.0188679245282,209.1V226Z" fill="#f5c518"><title>Week of 2026-09-13: 11 contributions</title></path>
+<path d="M898.0188679245282,226V220.5Q898.0188679245282,216.5 902.0188679245282,216.5H909.2641509433961Q913.2641509433961,216.5 913.2641509433961,220.5V226Z" fill="#f5c518"><title>Week of 2026-09-20: 5 contributions</title></path>
+<path d="M915.2641509433961,226V184.4Q915.2641509433961,180.4 919.2641509433961,180.4H926.509433962264Q930.509433962264,180.4 930.509433962264,184.4V226Z" fill="#f5c518"><title>Week of 2026-09-27: 24 contributions</title></path>
+<path d="M932.5094339622641,226V174.9Q932.5094339622641,170.9 936.5094339622641,170.9H943.754716981132Q947.754716981132,170.9 947.754716981132,174.9V226Z" fill="#f5c518"><title>Week of 2026-10-04: 29 contributions</title></path>
+<path d="M949.754716981132,226V97Q949.754716981132,93 953.754716981132,93H960.9999999999999Q964.9999999999999,93 964.9999999999999,97V226Z" fill="#ffffff"><title>Week of 2026-10-11: 70 contributions</title></path>
+
+<circle cx="957.3773584905659" cy="84" r="3.5" fill="#ffffff"/>
+<circle cx="957.3773584905659" cy="84" r="3.5" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0">
+  <animate attributeName="r" values="3.5;11" dur="2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+</circle>
+<text x="104.73584905660377" y="248" class="axis">Nov</text>
+<text x="173.71698113207546" y="248" class="axis">Dec</text>
+<text x="259.9433962264151" y="248" class="axis">Jan</text>
+<text x="328.92452830188677" y="248" class="axis">Feb</text>
+<text x="397.90566037735846" y="248" class="axis">Mar</text>
+<text x="466.88679245283015" y="248" class="axis">Apr</text>
+<text x="553.1132075471697" y="248" class="axis">May</text>
+<text x="622.0943396226414" y="248" class="axis">Jun</text>
+<text x="691.0754716981131" y="248" class="axis">Jul</text>
+<text x="777.3018867924527" y="248" class="axis">Aug</text>
+<text x="846.2830188679245" y="248" class="axis">Sep</text>
+<text x="932.5094339622641" y="248" class="axis">Oct</text>
+
+</svg>
