@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="210" viewBox="0 0 495 210" role="img" aria-labelledby="t d">
+<title id="t">Arsenal</title><desc id="d">C# 25.3%, Svelte 15.9%, TypeScript 12.5%, JavaScript 9.3%, HTML 7.7%, Rust 7.3%, Other 22.0%</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13151a"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+  <radialGradient id="haze" cx="1" cy="0" r="0.9"><stop offset="0" stop-color="#f5c518" stop-opacity="0.09"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset="0.5" stop-color="#f5c518" stop-opacity="0.8"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></linearGradient>
+  <clipPath id="card"><rect width="495" height="210" rx="14"/></clipPath>
+</defs>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #f2f2f2; }
+  .title { font-size: 13px; font-weight: 700; letter-spacing: 2.2px; }
+  .sub { font-size: 12px; fill: #a1a6ad; }
+  .label { font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; fill: #a1a6ad; }
+  .axis { font-size: 11px; fill: #6b7078; }
+  .value { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+</style>
+<g clip-path="url(#card)">
+  <rect width="495" height="210" fill="url(#bg)"/>
+  <rect width="495" height="210" fill="url(#haze)"/>
+  <rect x="-260" y="-40" width="160" height="290" fill="url(#sheen)" transform="skewX(-18)">
+    <animate attributeName="x" values="-260;-260;755" keyTimes="0;0.7;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="495" height="2" fill="url(#edge)" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.25;0.7" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</g>
+<rect x="0.5" y="0.5" width="494" height="209" rx="14" fill="none" stroke="#262a31"/>
+<path d="M100,28L104,28L108,16L110,30C122,34 128,24 126,14C150,20 178,26 196,46C178,44 168,52 166,64C156,56 144,58 140,68C130,62 112,66 100,84C88,66 70,62 60,68C56,58 44,56 34,64C32,52 22,44 4,46C22,26 50,20 74,14C72,24 78,34 90,30L92,16L96,28Z" transform="translate(24 23) scale(0.15)" fill="#f5c518"><animate attributeName="opacity" values="1;0.55;1" dur="3s" repeatCount="indefinite"/></path>
+<text x="62" y="36" class="title">ARSENAL</text>
+<text x="471" y="36" class="axis" text-anchor="end">languages by code size · 15 repos</text>
+<text x="24" y="73.42857142857143" style="font-size:12px;fill:#a1a6ad">C#</text>
+<rect x="116" y="65.42857142857143" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,65.42857142857143H421Q425,65.42857142857143 425,69.42857142857143V69.42857142857143Q425,73.42857142857143 421,73.42857142857143H116Z" fill="#f5c518"/>
+<text x="433" y="73.42857142857143" class="value">25%</text>
+<text x="24" y="92.28571428571429" style="font-size:12px;fill:#a1a6ad">Svelte</text>
+<rect x="116" y="84.28571428571429" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,84.28571428571429H306.61482621132006Q310.61482621132006,84.28571428571429 310.61482621132006,88.28571428571429V88.28571428571429Q310.61482621132006,92.28571428571429 306.61482621132006,92.28571428571429H116Z" fill="#f5c518"/>
+<text x="318.61482621132006" y="92.28571428571429" class="value">16%</text>
+<text x="24" y="111.14285714285715" style="font-size:12px;fill:#a1a6ad">TypeScript</text>
+<rect x="116" y="103.14285714285715" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,103.14285714285715H264.3952717344197Q268.3952717344197,103.14285714285715 268.3952717344197,107.14285714285715V107.14285714285715Q268.3952717344197,111.14285714285715 264.3952717344197,111.14285714285715H116Z" fill="#f5c518"/>
+<text x="276.3952717344197" y="111.14285714285715" class="value">12%</text>
+<text x="24" y="130" style="font-size:12px;fill:#a1a6ad">JavaScript</text>
+<rect x="116" y="122" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,122H225.42989945393083Q229.42989945393083,122 229.42989945393083,126V126Q229.42989945393083,130 225.42989945393083,130H116Z" fill="#f5c518"/>
+<text x="237.42989945393083" y="130" class="value">9.3%</text>
+<text x="24" y="148.85714285714286" style="font-size:12px;fill:#a1a6ad">HTML</text>
+<rect x="116" y="140.85714285714286" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,140.85714285714286H206.20835139117622Q210.20835139117622,140.85714285714286 210.20835139117622,144.85714285714286V144.85714285714286Q210.20835139117622,148.85714285714286 206.20835139117622,148.85714285714286H116Z" fill="#f5c518"/>
+<text x="218.20835139117622" y="148.85714285714286" class="value">7.7%</text>
+<text x="24" y="167.7142857142857" style="font-size:12px;fill:#a1a6ad">Rust</text>
+<rect x="116" y="159.7142857142857" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,159.7142857142857H201.0581281962382Q205.0581281962382,159.7142857142857 205.0581281962382,163.7142857142857V163.7142857142857Q205.0581281962382,167.7142857142857 201.0581281962382,167.7142857142857H116Z" fill="#f5c518"/>
+<text x="213.0581281962382" y="167.7142857142857" class="value">7.3%</text>
+<text x="24" y="186.57142857142856" style="font-size:12px;fill:#a1a6ad">Other</text>
+<rect x="116" y="178.57142857142856" width="309" height="8" rx="4" fill="#1a1d23"/>
+<path d="M116,178.57142857142856H380.4120005200659Q384.4120005200659,178.57142857142856 384.4120005200659,182.57142857142856V182.57142857142856Q384.4120005200659,186.57142857142856 380.4120005200659,186.57142857142856H116Z" fill="#5c6068"/>
+<text x="392.4120005200659" y="186.57142857142856" class="value">22%</text>
+</svg>
